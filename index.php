@@ -14,23 +14,11 @@ Echo "Tablica przed sortowaniem:  ";
 print_r($w);
 
 function babelkowe(array &$r){
-	for ($e=6;$e>=0;$e--){
-		
-		for ($i=count($r)-1;$i>=0;$i--)
-		{
-			//echo $r[count($r)-1];
-			if ($i==0){echo "<div>$r[$i]</div>";return 0;}
-			if ($r[$i]>$r[$i-1])
-			{
-				
-				$bufor=$r[$i];
-				$r[$i]=$r[$i-1];
-				$r[$i-1]=$bufor;
-				
-			}
-		
-		echo "<div>$r[$i]</div>";
-		}
+	for ($e=0;$e<=6;$e++){
+	
+	echo "<div>$e</div>";
+		for ($b=0;$b<4;$b++)
+		{printf("<a>%d</a>",$b);}
 	}
 }
 
