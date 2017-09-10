@@ -7,6 +7,14 @@ body{
 
 </style>
 <?php
+function random (int $e){
+	for ($i=0;$i<=$e;$i++)
+	{
+		$tab[]=rand(1,100);
+	}
+}
+
+
 
 $w=array(9,2,6,5,1,3);
 
@@ -16,19 +24,19 @@ print_r($w);
 function babelkowe(array &$r){
 	for ($e=0;$e<count($r);$e++){
 	
-	echo "<div>ble $r[$e]</div>";	
-		for ($i=0;$i<count($r);$i++)
+	echo "<div>pętla nr [$e]</div>";	
+		for ($i=count($r)-1;$i>=1;$i--)
 		{	//echo $i;
 			//echo $r[count($r)-1];
 			//if ($i==0){echo "<div>$r[$i]</div>";return 0;}
-			if ($e==4){echo "<div>kkkkkoniec $r[$i]</div>";return 0;}
-			if ($r[$i]<$r[$i+1])
+			//if ($i==count($r)-1){echo "<div>kkkkkoniec $i=$r[$i]</div>";break;}
+			if ($r[$i]<$r[$i-1])
 			{
 			
-			echo "<div>$r[$i] większe od".$r[$i+1]."</div>";
-				/*$bufor=$r[$i];
+			echo "<div>$r[$i] mniejsze od".$r[$i-1]."</div>";
+				$bufor=$r[$i];
 				$r[$i]=$r[$i-1];
-				$r[$i-1]=$bufor;*/
+				$r[$i-1]=$bufor;
 				
 			}
 		
