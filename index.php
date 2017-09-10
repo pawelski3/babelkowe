@@ -14,18 +14,20 @@ function random ($e){
 	}
 	return $tab;
 }
-$q=random(12);
-var_dump($q);
+$q=random(16);
 
-$w=array(9,2,6,5,1,3);
+
+
 
 Echo "<br>Tablica przed sortowaniem:  ";
-print_r($w);
-
+echo "<pre>";
+print_r($q);
+echo "</pre>";
 function babelkowe(array &$r){
+	print "Sortowanie bąbelkowe rosnąco:";
 	for ($e=0;$e<count($r);$e++){
 	
-	echo "<div>pętla nr [$e]</div>";	
+	echo "<div>pętla nr $e<ul>";	
 		for ($i=count($r)-1;$i>=1;$i--)
 		{	//echo $i;
 			//echo $r[count($r)-1];
@@ -33,20 +35,23 @@ function babelkowe(array &$r){
 			//if ($i==count($r)-1){echo "<div>kkkkkoniec $i=$r[$i]</div>";break;}
 			if ($r[$i]<$r[$i-1])
 			{
-			
-			echo "<div>$r[$i] mniejsze od".$r[$i-1]."</div>";
+			$bufor=$i-1;
+			echo "<li>$r[$i] z pozycji $i zostało zamienione z ".$r[$i-1]." z pozycji $bufor</li>";
 				$bufor=$r[$i];
 				$r[$i]=$r[$i-1];
 				$r[$i-1]=$bufor;
 				
-			}
+			} 
 		
 		//echo "<div>wwww$r[$i]</div>";
 		}
+		echo "</ul></div>";
 	}
 }
 
 babelkowe($q);
 echo "<br>Tablica po sortowaniu: ";
+echo "<pre>";
 print_r($q);
+echo "</pre>";
 ?>
