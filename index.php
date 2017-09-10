@@ -7,18 +7,19 @@ body{
 
 </style>
 <?php
-function random (int $e){
+function random ($e){
 	for ($i=0;$i<=$e;$i++)
 	{
 		$tab[]=rand(1,100);
 	}
+	return $tab;
 }
-
-
+$q=random(12);
+var_dump($q);
 
 $w=array(9,2,6,5,1,3);
 
-Echo "Tablica przed sortowaniem:  ";
+Echo "<br>Tablica przed sortowaniem:  ";
 print_r($w);
 
 function babelkowe(array &$r){
@@ -45,7 +46,7 @@ function babelkowe(array &$r){
 	}
 }
 
-babelkowe($w);
+babelkowe($q);
 echo "<br>Tablica po sortowaniu: ";
-print_r($w);
+print_r($q);
 ?>
