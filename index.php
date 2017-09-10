@@ -29,10 +29,7 @@ function babelkowe(array &$r){
 	
 	echo "<div>pętla nr $e<ul>";	
 		for ($i=count($r)-1;$i>=1;$i--)
-		{	//echo $i;
-			//echo $r[count($r)-1];
-			//if ($i==0){echo "<div>$r[$i]</div>";return 0;}
-			//if ($i==count($r)-1){echo "<div>kkkkkoniec $i=$r[$i]</div>";break;}
+		{	
 			if ($r[$i]<$r[$i-1])
 			{
 			$bufor=$i-1;
@@ -43,7 +40,6 @@ function babelkowe(array &$r){
 				
 			} 
 		
-		//echo "<div>wwww$r[$i]</div>";
 		}
 		echo "</ul></div>";
 	}
